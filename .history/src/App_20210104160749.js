@@ -82,7 +82,7 @@ function App() {
         </div>
         <div className='selections-container'>
           <h3>Choose you weapon</h3>
-          <div className='selections'>
+          <div className='selections-container'>
             <button className='selection-btn' onClick={() => selectHandler(optionsArray[0])}><img src='./images/rock.svg' /></button>
             <button className='selection-btn' onClick={() => selectHandler(optionsArray[1])}><img src='./images/paper.svg' /></button>
             <button className='selection-btn' onClick={() => selectHandler(optionsArray[2])}><img src='./images/scissors.svg' /></button>

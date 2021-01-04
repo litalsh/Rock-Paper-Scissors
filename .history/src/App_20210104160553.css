@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Play', sans-serif;
 }
 
 .board {
@@ -14,34 +11,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: aliceblue;
+  border: 3px solid #4C275C;
   border-radius: 20px; 
-  padding-bottom: 20px;
 }
 
 .scores{
   display: flex;
   justify-content: space-around;
+  background: darkgray;
   border-radius: 3px;
   width: 85%;
-  margin: auto;
+  margin: 0 auto;
   line-height: 3rem;
 }
 
 .score{
   font-size: 1.2rem;
+  color: #fff;
 }
 
-.selections-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.selections, .palyers-container {
+.selections-container, .palyers-container {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
 }
 
 .selection-btn {

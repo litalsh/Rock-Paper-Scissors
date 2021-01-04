@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, {useState}  from 'react';
 import './App.css';
 
 function App() {
-  const optionsArray = [{ item: 'rock', image: './images/rock.svg' },
-  { item: 'paper', image: './images/paper.svg' },
-  { item: 'scissors', image: './images/scissors.svg' }];
+  const optionsArray = [{item: 'rock', image: './images/rock.svg'}, 
+                        {item: 'paper', image: './images/paper.svg'}, 
+                        {item: 'scissors', image: './images/scissors.svg'}];
 
   const [userScore, setUserScore] = useState(0);
   const [computerScore, setComputerScore] = useState(0);
@@ -44,7 +44,7 @@ function App() {
   };
 
   const selectHandler = (userSelection) => {
-    console.log('user: ', userScore, 'computer: ', computerScore);
+    console.log('user: ', userScore, 'computer: ', computerScore  );
     console.log(userSelection);
     setUserSelectDisplay(userSelection.image);
     computerResult = random();
@@ -53,11 +53,11 @@ function App() {
     let result = whoWon(userSelection.item, computerResult.item);
     console.log(result);
     if (result === 'user') {
-      setUserScore(userScore + 1)
+      setUserScore(userScore + 1 )
     }
     if (result === 'computer') {
       setComputerScore(computerScore + 1)
-    }
+    } 
   }
   const firstLoad = () => {
     return (
@@ -74,19 +74,19 @@ function App() {
       <div className='board'>
         <div className='scores'>
           <span className="score"><strong>Human :  </strong>{userScore}</span>
-          <span className="score"><strong>Computer :  </strong>{computerScore}</span>
+          <span  className="score"><strong>Computer :  </strong>{computerScore}</span>
         </div>
         <div className='palyers-container'>
           <div className='players'><img src={userSelectDisplay} /></div>
           <div className='players'><img src={computerSelectDisplay} /></div>
-        </div>
+        </div>        
         <div className='selections-container'>
           <h3>Choose you weapon</h3>
-          <div className='selections'>
-            <button className='selection-btn' onClick={() => selectHandler(optionsArray[0])}><img src='./images/rock.svg' /></button>
-            <button className='selection-btn' onClick={() => selectHandler(optionsArray[1])}><img src='./images/paper.svg' /></button>
-            <button className='selection-btn' onClick={() => selectHandler(optionsArray[2])}><img src='./images/scissors.svg' /></button>
-            <button className='selection-btn' onClick={() => selectHandler(random())}><img src='./images/random.svg' /></button>
+          <div>
+          <button className='selection-btn' onClick={() => selectHandler(optionsArray[0])}><img src='./images/rock.svg' /></button>
+          <button className='selection-btn' onClick={() => selectHandler(optionsArray[1])}><img src='./images/paper.svg' /></button>
+          <button className='selection-btn' onClick={() => selectHandler(optionsArray[2])}><img src='./images/scissors.svg' /></button>
+          <button className='selection-btn' onClick={() => selectHandler(random())}><img src='./images/random.svg' /></button>
           </div>
         </div>
       </div>
